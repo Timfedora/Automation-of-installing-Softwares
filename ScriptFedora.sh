@@ -1,20 +1,35 @@
 #!/bin/sh
 
-cd
+echo "please enter your laptops password"
+sudo echo
 
-mkdir Softwares
+cd || exit 
 
-cd Softwares
+mkdir Softwares || { echo "Unable to make software folder, exiting..."; exit 1; }
+
+cd Softwares || { echo "Unable to change to software folder, exiting..."; exit 1; }
 
 mkdir VScode
 
 mkdir Kicad
 
-mkdir qucs
+mkdir Qucs
 
-mkdir blender
+mkdir Blender
 
-cd VScode
+cd || exit 
+
+dnf install qucs -y || echo unable to install qucs
+
+sudo dnf install blender -y || echo unable to install blender 
+
+sudo dnf install mpv -y ||  echo echo unable to install mpv
+
+sudo dnf install pluma -y  ||  echo echo unable to install pluma
+
+cd Softwares || exit
+
+cd VScode || exit
 
 curl -L -o vscode.rpm 'https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64'
 
@@ -28,20 +43,8 @@ sudo dnf copr enable -y @kicad/kicad-testing
 
 sudo dnf install -y kicad kicad-packages3d kicad-doc
 
-sudo dnf install qucs -y
-
-sudo dnf install blender -y
-
-sudo dnf install mpv -y 
-
-sudo dnf install pluma -y
-
-cd
-
 echo ""
 echo "========= SUCCESS ==========="
 echo ""
-
-
 
 
