@@ -1,8 +1,13 @@
 #!/bin/sh
 
-mkdir Softwares
+echo "please enter your laptops password"
+sudo echo
 
-cd Softwares
+cd || exit 
+               
+mkdir Softwares || { echo "Unable to make software folder, exiting..."; exit 1; }
+
+cd Softwares || { echo "Unable to change to software folder, exiting..."; exit 1; }
 
 mkdir Vscode
 
@@ -10,7 +15,11 @@ mkdir Kicad
 
 mkdir Blender
 
-cd Vscode
+sudo apt install mpv -y || echo unable to install mpv
+
+sudo apt install pluma -y  || echo unable to install pluma
+
+cd Vscode || exit
 
 curl -L -o vscode.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
 
@@ -20,16 +29,13 @@ rm vscode.deb
 
 sudo apt install flatpak -y
 
-cd Kicad
+sudo add-apt-repository -y ppa:kicad/kicad-8.0-releases
 
-curl -L -o org.kicad.KiCad.flatpakref 'https://dl.flathub.org/repo/appstream/org.kicad.KiCad.flatpakref'
+sudo apt update -y
 
+sudo apt install -y kicad
 
-sudo flatpak install ./org.kicad.KiCad.flatpakref -y
-
-rm org.kicad.KiCad.flatpakref
-
-cd Blender
+cd Blender || exit 
 
 curl -L -o org.blender.Blender.flatpakref 'https://dl.flathub.org/repo/appstream/org.blender.Blender.flatpakref'
 
@@ -37,15 +43,13 @@ sudo flatpak install ./org.blender.Blender.flatpakref -y
 
 rm org.blender.Blender.flatpakref
 
-sudo apt install pluma -y
 
-sudo apt install mpv -y
-
-cd 
+cd || exit 
 
 echo ""
 echo "========= SUCCESS ==========="
 echo ""
+
 
 
 
