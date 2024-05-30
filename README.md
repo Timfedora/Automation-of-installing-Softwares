@@ -10,18 +10,17 @@ Make the Script Executable
 
     Before running the script, ensure it's executable. Use the following command:
 
-    ```bash
-    chmod +x install.sh
-    ```
+    
+    chmod +x your os.sh
+    
 
  Run the Script
 
     Execute the script to start the installation process. The script will automatically detect the operating system and architecture and install the appropriate versions of the software.
 
-    ```bash
-    ./install.sh
-    ```
-
+  
+    ./your os.sh
+   
 4. Review Before Running
 
     It's important to review the script before running it to ensure it meets your requirements and is safe to execute.
