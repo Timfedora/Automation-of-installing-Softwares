@@ -8,16 +8,12 @@ Installing software on a Linux system can sometimes be a tedious process, especi
 
 Make the Script Executable
 
-    Before running the script, ensure it's executable. Use the following command:
-
+   
     
     chmod +x your os.sh
     
 
  Run the Script
-
-    Execute the script to start the installation process. The script will automatically detect the operating system and architecture and install the appropriate versions of the software.
-
   
     ./your os.sh
    
