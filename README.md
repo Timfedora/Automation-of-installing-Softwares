@@ -43,4 +43,4 @@ Installing software on a Linux system can sometimes be a tedious process, especi
 
 1.     git clone https://github.com/Timfedora/Automation-of-installing-Softwares.git
 2.     cd Automation-of-installing-Softwares
-3.     ./Automation-of-installing-Softwares.sh
+3.     ./Software-Installer.sh
