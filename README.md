@@ -1,35 +1,48 @@
- Automation of Software Installation
+# Software-Installer
 
-This script automates the installation of various software packages on a Linux system.
+Software-Installer is a Bash script designed to automate the installation of various software packages on a Linux system. It allows you to select and install multiple packages in one go, simplifying the setup process.
 
- Purpose 
+## Purpose
 
-Installing software on a Linux system can sometimes be a tedious process, especially when multiple packages need to be installed. This script aims to simplify the process by automating the installation of commonly used software packages.
+Installing software on a Linux system can sometimes be a tedious process, especially when multiple packages are needed. This script automates the installation of commonly used software, making it easier to get your system up and running with the tools you need.
 
-Make the Script Executable
+## Supported Software
 
-   
-    
-    chmod +x your os.sh
-    
+- **Text Editors:**
+  - Atom
+  - Pluma
+  - Gedit
+  - Emacs
+  - Vim
+  - Kwrite
+  - Visual Studio Code
 
- Run the Script
-  
-    ./your os.sh
-   
-4. Review Before Running
+- **Audio & Video:**
+  - MPV
+  - Audacity
 
-    It's important to review the script before running it to ensure it meets your requirements and is safe to execute.
+- **Electronics:**
+  - Qucs
+  - KiCad
 
- Supported Software
+- **Terminals:**
+  - Tilix
+  - Konsole
 
-- **Visual Studio Code**: A popular source-code editor developed by Microsoft.
-- **KiCad**: An open-source software suite for electronic design automation (EDA).
-- **Blender**: A free and open-source 3D creation suite.
-- **Additional Packages**: The script also installs some additional packages like Pluma and MPV.
+- **Other:**
+  - GParted
 
-Contribution
+## Prerequisites
 
-Contributions to this project are welcome! If you have any suggestions, improvements, or new features to add, feel free to submit a pull request.
+- A Unix-like operating system (Linux).
+- `dnf` package manager (used for Fedora, CentOS, RHEL).
+- `curl` (for downloading packages).
+- `sudo` privileges for installing software.
 
+## Installation
+
+1. **Clone or Download the Script:**
+
+   ```bash
+   git clone https://github.com/your-username/Software-Installer.git
 
