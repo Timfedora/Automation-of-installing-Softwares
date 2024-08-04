@@ -38,6 +38,7 @@ Installing software on a Linux system can sometimes be a tedious process, especi
 - `dnf` package manager (used for Fedora, CentOS, RHEL).
 - `curl` (for downloading packages).
 - `sudo` privileges for installing software.
+- 
 **Clone the repository**:
 
 1.     git clone https://github.com/Timfedora/Automation-of-installing-Softwares.git
