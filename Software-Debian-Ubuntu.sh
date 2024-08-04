@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Please enter your laptop's password"
-sudo echo
+sudo -v
 
 echo "Software list"
 echo "Text editors"
@@ -49,8 +49,9 @@ install_software() {
         10) sudo apt install -y qucs ;;
         11) 
             echo "Installing KiCad..."
-            sudo add-apt-repository -y ppa:kicad/kicad-7.0
+            sudo add-apt-repository ppa:kicad/kicad-8.0-releases
             sudo apt update
+            sudo apt install kicad
             sudo apt install -y kicad ;;
         12) sudo apt install -y tilix ;;
         13) sudo apt install -y konsole ;;
