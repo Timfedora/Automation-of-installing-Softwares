@@ -35,7 +35,7 @@ Installing software on a Linux system can sometimes be a tedious process, especi
 ## Prerequisites
 
 - A Unix-like operating system (Linux).
-- `dnf` package manager (used for Fedora, CentOS, RHEL).
+- `dnf/apt/pacman/zypper` package manager (used for Fedora, CentOS, RHEL).
 - `curl` (for downloading packages).
 - `sudo` privileges for installing software.
 - 
