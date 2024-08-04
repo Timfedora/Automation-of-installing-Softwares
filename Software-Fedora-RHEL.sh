@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Please enter your laptop's password"
-sudo echo
+sudo -v
 
 echo "Software list"
 echo "Text editors"
