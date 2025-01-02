@@ -16,6 +16,9 @@ Installing software on a Linux system can sometimes be a tedious process, especi
   - Vim
   - Kwrite
   - Visual Studio Code
+  - micro
+  - nano
+  - vim 
 
 - **Audio & Video:**
   - MPV
