@@ -12,17 +12,19 @@ echo "(4) emacs"
 echo "(5) vim"
 echo "(6) kwrite"
 echo "(7) vscode"
+echo "(8) micro"
+echo "(9) nano"
 echo "Audio & Video"
-echo "(8) mpv"
-echo "(9) audacity"
+echo "(10) mpv"
+echo "(11) audacity"
 echo "Electronics"
-echo "(10) qucs"
-echo "(11) kicad"
+echo "(12) qucs"
+echo "(13) kicad"
 echo "Terminals"
-echo "(12) tilix"
-echo "(13) konsole"
+echo "(14) tilix"
+echo "(15) konsole"
 echo "Other"
-echo "(14) gparted"
+echo "(16) gparted"
 
 echo "Please enter the numbers of the Softwares you would like with spaces"
 read -r selections
@@ -35,19 +37,20 @@ install_software() {
         4) sudo pacman -S --noconfirm emacs ;;
         5) sudo pacman -S --noconfirm vim ;;
         6) sudo pacman -S --noconfirm kwrite ;;
-        7) 
+        7)
             echo "Downloading Visual Studio Code..."
             curl -L -o vscode.pkg.tar.zst 'https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64'
             sudo pacman -U --noconfirm vscode.pkg.tar.zst
             rm vscode.pkg.tar.zst ;;
-        8) sudo pacman -S --noconfirm mpv ;;
-        9) sudo pacman -S --noconfirm audacity ;;
-        10) sudo pacman -S --noconfirm qucs ;;
+        8) sudo pacman -S --noconfirm micro ;;
+        9) sudo pacman -S --noconfirm nano ;;
+        10) sudo pacman -S --noconfirm mpv ;;
         11) 
             echo "Installing KiCad..."
-            sudo pacman -S --noconfirm kicad ;;
-        12) sudo pacman -S --noconfirm tilix ;;
-        13) sudo pacman -S --noconfirm konsole ;;
+            sudo pacman -S --noconfirm audictiy ;;
+        12) sudo pacman -S --noconfirm qucs ;;
+        13) sudo pacman -S --noconfirm tilix ;;
+        14) sudo pacman -S --noconfirm konsole ;;
         14) sudo pacman -S --noconfirm gparted ;;
         *) echo "Invalid selection" ;;
     esac
